@@ -9,6 +9,7 @@ import (
 	"gitlab.com/coresec.xyz/GoCSshell/modules/external"
 )
 
+// Input verarbeitet build-in commands und exec System Programme
 func Input(input string) error {
 	// Remove the newline character.
 	input = strings.TrimSuffix(input, "\n")

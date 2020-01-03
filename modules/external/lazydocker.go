@@ -26,6 +26,7 @@ var (
 	composeFiles  []string
 )
 
+// Lazydocker main.go von lazydocker leicht angepasst
 func Lazydocker() error {
 	info := fmt.Sprintf(
 		"%s\nDate: %s\nBuildSource: %s\nCommit: %s\nOS: %s\nArch: %s",

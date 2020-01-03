@@ -4,4 +4,5 @@
 # BUILTIN COMMANDS
 
 ### cd 
- cd [dir]
+
+ cd ~~[-L|[-P [-e]] [-@]]~~ [dir]
