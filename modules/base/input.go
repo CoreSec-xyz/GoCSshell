@@ -1,13 +1,13 @@
 package base
 
 import (
-	"gitlab.com/coresec.xyz/GoCSshell/modules/commands"
 	"os"
 	"os/exec"
 	"strings"
+
+	"gitlab.com/coresec.xyz/GoCSshell/modules/commands"
+	"gitlab.com/coresec.xyz/GoCSshell/modules/external"
 )
-
-
 
 func Input(input string) error {
 	// Remove the newline character.
@@ -24,6 +24,8 @@ func Input(input string) error {
 	switch args[0] {
 	case "cd":
 		return commands.Cd(args)
+	case "lazydocker":
+		return external.Lazydocker()
 	case "exit":
 		os.Exit(0)
 	}
