@@ -3,14 +3,19 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/CoreSec-xyz/GoCSshell/modules/base"
+	"log"
 	"os"
+
+	"github.com/CoreSec-xyz/GoCSshell/modules/base"
+	"github.com/CoreSec-xyz/GoCSshell/modules/commands"
 )
 
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		fmt.Print("> ")
+		commands.Pwd()
+		fmt.Print(">")
+
 		// Read the keyboad input.
 		input, err := reader.ReadString('\n')
 		if err != nil {
@@ -18,8 +23,9 @@ func main() {
 		}
 
 		// Handle the execution of the input.
-		if err = base.Input(input); err != nil {
-			fmt.Fprintln(os.Stderr, err)
+		if err != nil {
+			log.Fatal(err)
 		}
+		base.Input(input)
 	}
 }
