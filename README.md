@@ -6,3 +6,11 @@
 ### cd 
 
  cd ~~[-L|[-P [-e]] [-@]]~~ [dir]
+
+ ### pwd
+
+ pwd
+
+ ### export
+
+ export var=val
