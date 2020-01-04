@@ -26,7 +26,7 @@ func Input(input string) error {
 	case "cd":
 		return commands.Cd(args)
 	case "lazydocker":
-		return external.Lazydocker()
+		return external.Lazydocker() // Only test if it work
 	case "exit":
 		os.Exit(0)
 	}

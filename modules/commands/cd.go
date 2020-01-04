@@ -4,9 +4,7 @@ import (
 	"os"
 )
 
-// ErrNoPath is returned when 'cd' was called without a second argument.
-// var ErrNoPath = errors.New("path required")
-
+// Cd func fuer verzeichniswechsel
 func Cd(args []string) error {
 
 	// 'cd' to home with empty path not yet supported.
@@ -17,7 +15,7 @@ func Cd(args []string) error {
 
 	// Check for special path.
 	switch args[1] {
-	case "~":
+	case "~": // Funktioniert noch nicht mit ~/dir/path
 		// Finde User Home
 		home, err := os.UserHomeDir()
 		if err != nil {
