@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/gitlab.com/coresec.xyz/GoCSshell
+  path: src/github.com/coresec-xyz/GoCSshell
 
 pipeline:
   test:
