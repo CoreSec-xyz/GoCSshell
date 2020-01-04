@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"gitlab.com/coresec.xyz/GoCSshell/modules/base"
+	"github.com/CoreSec-xyz/GoCSshell/modules/base"
 	"os"
 )
 

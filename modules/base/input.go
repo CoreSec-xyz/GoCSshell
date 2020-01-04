@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"gitlab.com/coresec.xyz/GoCSshell/modules/commands"
-	"gitlab.com/coresec.xyz/GoCSshell/modules/external"
+	"github.com/CoreSec-xyz/GoCSshell/modules/commands"
+	"github.com/CoreSec-xyz/GoCSshell/modules/external"
 )
 
 // Input verarbeitet build-in commands und exec System Programme
