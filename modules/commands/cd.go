@@ -22,9 +22,6 @@ func Cd(args []string) error {
 			return err
 		}
 		return os.Chdir(home)
-
-	case "exit":
-		os.Exit(0)
 	}
 	// Change the directory and return the error.
 	return os.Chdir(args[1])
