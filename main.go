@@ -13,7 +13,9 @@ import (
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		commands.Pwd()
+		if base.Config.ShowPwd == true {
+			commands.Pwd()
+		}
 		fmt.Print(">")
 
 		// Read the keyboad input.
