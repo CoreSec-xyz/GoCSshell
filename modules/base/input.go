@@ -11,8 +11,6 @@ import (
 
 // Input verarbeitet build-in commands und exec System Programme
 func Input(input string) error {
-	// Remove the newline character.
-	input = strings.TrimSuffix(input, "\n")
 
 	// Split the input separate the command and the arguments.
 	args := strings.Split(input, " ")
@@ -24,13 +22,17 @@ func Input(input string) error {
 	// Check for built-in commands.
 	switch args[0] {
 	case "cd":
-		return commands.Cd(args)
+		err := commands.Cd(args)
+		return err
 	case "lazydocker":
-		return external.Lazydocker() // Only test if it work
+		err := external.Lazydocker() // Only test if it work
+		return err
 	case "pwd":
-		return commands.Pwd()
+		err := commands.Pwd()
+		return err
 	case "export":
-		return commands.Export(args)
+		err := commands.Export(args)
+		return err
 	case "exit":
 		os.Exit(0)
 	}

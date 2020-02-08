@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/CoreSec-xyz/GoCSshell/modules/base"
 	"github.com/CoreSec-xyz/GoCSshell/modules/commands"
@@ -28,6 +29,9 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
+
+		// Remove the newline character.
+		input = strings.TrimSuffix(input, "\n")
 		base.Input(input)
 	}
 }
